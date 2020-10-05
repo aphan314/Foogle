@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foogle</title>
+    <style>
+      .center{
+        display: block;
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: 50%;
+      }
+
+      .search-container{
+        text-align:center;
+      }
+
+      input{
+        font-size: 20px;
+      }
+
+      button{
+        background-color: #f4f4f4;
+        font-size: 20px;
+        border-radius: 4px;
+      }
+
+    </style>
+</head>
+<body>
+  <img src="/static/foogle_logo.png" width="380" height="135" class="center">
+  <div class="search-container">
+    <form action="http://localhost:5000/result" method="POST">
+      <input type="text" placeholder="Enter query here" name="search" size="50">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

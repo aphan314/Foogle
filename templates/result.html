@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        ul{
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        {% for url in result %}
+            <li><a href="//{{ url[0] }}"> {{ url[0] }} </a></li>
+            {% for sentence in url[1] %}
+                <p>{{ sentence }}</p>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
