@@ -12,7 +12,7 @@ def query():
 def result():
    if request.method == 'POST':
       result = request.form
-      query_list = PartA.tokenizer(result.values())
+      query_list = create_tokens.tokenizer(result.values())
       main_urls = search_engine.main(query_list)
       if len(main_urls) > 0:
          return render_template("result.html", result = main_urls)
